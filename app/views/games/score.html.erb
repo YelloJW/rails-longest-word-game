@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Result and Score</h1>
+
+  <p><%= @message %></p>
+
+  <%= link_to "Play again", new_path %>
+
+  <p><strong>Word score:</strong> <%= @word_score %></p>
+  <p><strong>Letter scores:</strong> <%= @letter_scores %></p>
+  <p><strong>Cumulative score:</strong> <%= @score %></p>
+</div>

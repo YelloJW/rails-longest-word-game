@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Scrabble</h1>
+
+  <div class="card">
+    <% @letters.each do |letter| %>
+    <span class="letter-tile"><%=letter %></span>
+    <% end %>
+  </div>
+
+  <p>What is the longest word you can find?</p>
+  <form id="form" action="/score" method="POST">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="hidden" name="letters" value="<%=@letters.join%>">
+    <input type="text" name="word" placeholder="Find the longest word">
+    <input id="button" type="submit" name="play" value="Play">
+  </form>
+</div>
